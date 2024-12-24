@@ -87,6 +87,50 @@
             <span class="author-block"><sup>7</sup>Mila, University of Montreal</span>
         </div>
 
+
+        <div class="column has-text-centered">
+          <div class="publication-links">
+            <!-- PDF Link. -->
+            <span class="link-block">
+              <a href="http://arxiv.org/pdf/2412.17811"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Paper</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="http://arxiv.org/abs/2412.17811"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span>
+            <!-- Video Link. -->
+            <span class="link-block">
+              <a href="https://www.youtube.com/watch?v=-Fj4mN3jeNo"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                </span>
+                <span>Video</span>
+              </a>
+            </span>
+            <!-- Code Link. -->
+            <span class="link-block">
+              <a href="https://chatgarment.github.io/"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Code (Coming Soon)</span>
+                </a>
+            </span>
+          </div>
+
         </div>
       </div>
     </div>
@@ -112,13 +156,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We introduce ChatGarment, a novel approach that leverages large vision-language models (VLMs) to automate the estimation, generation, and editing of 3D garment sewing patterns from images or text descriptions. 
+            We introduce ChatGarment, a novel approach that leverages large vision-language models (VLMs) to automate the estimation, generation, and editing of 3D garments from images or text descriptions. 
           </p>
           <p>
-            Unlike previous methods that often lack robustness and interactive editing capabilities, ChatGarment finetunes a VLM to produce GarmentCode, a JSON-based, language-friendly format for 2D sewing patterns, enabling both estimating and editing from images and text instructions. To optimize performance, we refine GarmentCode by expanding its support for more diverse garment types and simplifying its structure, making it more efficient for VLM finetuning. Additionally, we develop an automated data construction pipeline to generate a large-scale dataset of image-to-sewing-pattern and text-to-sewing-pattern pairs, empowering ChatGarment with strong generalization across various garment types.  
+            Unlike previous methods that struggle in real-world scenarios or lack interactive editing capabilities, ChatGarment can estimate sewing patterns from in-the-wild images or sketches, generate them from text descriptions, and edit garments based on user instructions, all within an interactive dialogue. These sewing patterns can then be draped into 3D garments, which are easily animatable and simulatable. This is achieved by finetuning a VLM to directly generate a JSON file that includes both textual descriptions of garment types and styles, as well as continuous numerical attributes. This JSON file is then used to create sewing patterns through a programming parametric model. To support this, we refine the existing programming model, GarmentCode, by expanding its garment type coverage and simplifying its structure for efficient VLM fine-tuning. Additionally, we construct a large-scale dataset of image-to-sewing-pattern and text-to-sewing-pattern pairs through an automated data pipeline. 
           </p>
           <p>
-            Extensive evaluations demonstrate ChatGarment's ability to accurately reconstruct, generate, and edit garments from multimodal inputs, highlighting its potential to revolutionize workflows in fashion and gaming applications.
+            Extensive evaluations demonstrate ChatGarment's ability to accurately reconstruct, generate, and edit garments from multimodal inputs, highlighting its potential to revolutionize workflows in fashion and gaming applications. Code and data will be available at https://chatgarment.github.io/
           </p>
         </div>
       </div>
@@ -169,7 +213,7 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            <b>Results of image-based reconstruction.</b> Unlike SewFormer and DressCode, which often mess up or miss the garments, ChatGarment could faithfully capture the shape, style and the composition of the target garments.
+            <b>Results of image-based reconstruction.</b> Unlike previous methods (SewFormer, DressCode, GarmentRecovery, and GPT-4o-based method) which often mess up or miss the garments. ChatGarment could faithfully capture the shape, style and the composition of the target garments. 
           </p>
         </div>
       </div>
@@ -220,6 +264,26 @@
         </div>
       </div>
     </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Rule-based Simulation Control Results</h2>
+
+        <div class="container is-max-desktop">
+          <div class="hero-body">
+            <p style="text-align: center;"><img src="./static/images/simulation.png" alt="" style="max-width:100%;"></p>
+            <h2 class="subtitle has-text-centered">
+            </h2>
+          </div>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            <b>Results of Rule-based Simulation Control.</b> We apply our rule-based method to estimate the simulation parameters corresponding to the input images. This approach also allows control over different physical deformation behaviors, such as those of soft materials like silk (Stiffness&darr;) and rigid materials like denim (Stiffness&uarr;).
+          </p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -251,6 +315,18 @@
   </div>
 </section> -->
 
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{bian2024chatgarment,
+  title     = {ChatGarment: Garment Estimation, Generation and Editing via Large Language Models},
+  author    = {Bian, Siyuan and Xu, Chenghao and Xiu, Yuliang and Grigorev, Artur and Liu, Zhen and Lu, Cewu and Black, Michael J and Feng, Yao},
+  journal   = {arXiv preprint arXiv:2412.17811},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
 
 
 <footer class="footer">
