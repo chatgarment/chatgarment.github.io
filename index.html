@@ -290,32 +290,42 @@
 </section>
 
 
-<!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <h2 class="title is-3">Garment Editing Results</h2>
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/video_edit.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/video_edit2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="content has-text-justified">
-          <p>
-            <b>Results of garment editing.</b> The models (SewFormer, DressCode, and our ChatGarment) are tasked with editing the source garment shown in the source image according to the given editing instructions in the prompt boxes. ChatGarment accurately modifies the targeted garment part according to the input prompt. In contrast, methods based on SewFormer or DressCode often fail to precisely follow the prompt instructions and alter other untouched areas of the garment.
-          </p>
-        </div>
+
+
+<section class="section">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-three-fifths">
+      <h2 class="title is-3">Related Works</h2>
+      <div class="content has-text-justified" style="max-width: 800px; margin: 0 auto;">
+        <p>
+          <b><a href="https://github.com/maria-korosteleva/GarmentCode">GarmentCode</a></b> - A domain-specific language (DSL) designed for creating parametric sewing patterns.
+        </p>
+        <p>
+          <b><a href="https://yfeng95.github.io/ChatPose/">ChatPose</a></b> - Leverages Large Language Models (LLMs) to understand and reason about 3D human poses based on images and textual descriptions.
+        </p>
+        <p>
+          <b><a href="https://github.com/haotian-liu/LLaVA/">LLaVA</a></b> - A open-sourced Large Language and Vision Assistant.
+        </p>
       </div>
     </div>
   </div>
-</section> -->
+
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-three-fifths">
+      <h2 class="title is-3">Concurrent Works</h2>
+      <div class="content has-text-justified" style="max-width: 800px; margin: 0 auto;">
+        <p>These works also fine-tune multimodal large language models to generate sewing patterns.</p>
+        <p>
+          <b><a href="https://georgenakayama.github.io/AIpparel/">AIpparel</a></b> - A multimodal foundation model for digital garment creation. Unlike ChatGarment, AIpparel emphasizes more on text-based generation and produces vector-quantized patterns instead of JSON files.
+        </p>
+        <p>
+          <b><a href="https://style3d.github.io/design2garmentcode/">Design2GarmentCode</a></b> - A modality-agnostic framework for sewing pattern generation. Instead of JSON files, it generates Python programs for pattern creation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 <section class="section" id="BibTeX">
